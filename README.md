@@ -1,14 +1,15 @@
 # Geozon-RG-01--E27-BK7231T-WB2L--SM2135
 RGBCW Лампа, цоколь E27 Модуль WB2L ( чип BK7231 ) драйвер SM2135
 
-OpenBeken:
+[OpenBeken](https://github.com/openshwprojects/OpenBK7231T_App):
+
 ![изображение](https://user-images.githubusercontent.com/64173457/223051331-79944bf3-02e1-4933-bbbd-02d2fcaf5c21.png)
 ![изображение](https://user-images.githubusercontent.com/64173457/223051525-6f7fe76d-109d-4f8c-9253-60bf13ec48db.png)
 StartupCommand: SM2135_Current 0x07 0x02
 ![изображение](https://user-images.githubusercontent.com/64173457/223051713-d4bbab86-33d1-4c63-9a4f-c80fe730288f.png)
 
 
-LibreTuya:
+[LibreTuya](https://github.com/kuba2k2/libretuya):
 ```
 substitutions:
   board_name: rg01_1
@@ -110,3 +111,5 @@ sensor:
   - platform: uptime
     name: uptime_sensor.$board_name
 ```
+Кастомный [компонет](https://git.kolosowscy.pl/homeassistant/esphome-hardware/-/tree/10d9f14fe8e9185eab9cc4ed9f239e3e4a0e0203/custom_components/sm2135) используетс вместо штатного, который пока сломан: [sm2135.zip](https://github.com/esnet146/Geozon-RG-01--E27-BK7231T-WB2L--SM2135/files/10895782/sm2135.zip)
+В архиве поправил ток драйвера
